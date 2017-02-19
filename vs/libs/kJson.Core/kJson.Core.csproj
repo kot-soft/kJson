@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <RootNamespace>kJson</RootNamespace>
+    <AssemblyName>kJson</AssemblyName>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Constantine Telesnin</Authors>
+    <Company>KotSoft</Company>
+    <Description>Simple and fast JSON parsing and serializing</Description>
+    <Copyright>Constantine Telesnin</Copyright>
+    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageTags>CSharp JSON Parser Generator Serializer C# Json.NET</PackageTags>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\src\JSON.cs" Link="JSON.cs" />
+    <Compile Include="..\..\..\src\read\EscapeInfo.cs" Link="read\EscapeInfo.cs" />
+    <Compile Include="..\..\..\src\read\ParseException.cs" Link="read\ParseException.cs" />
+    <Compile Include="..\..\..\src\read\Parser.cs" Link="read\Parser.cs" />
+    <Compile Include="..\..\..\src\read\ParsingStack.cs" Link="read\ParsingStack.cs" />
+    <Compile Include="..\..\..\src\read\ParsingState.cs" Link="read\ParsingState.cs" />
+    <Compile Include="..\..\..\src\read\Reader.cs" Link="read\Reader.cs" />
+    <Compile Include="..\..\..\src\read\RestrictLevel.cs" Link="read\RestrictLevel.cs" />
+    <Compile Include="..\..\..\src\read\StackList.cs" Link="read\StackList.cs" />
+    <Compile Include="..\..\..\src\read\StreamReader.cs" Link="read\StreamReader.cs" />
+    <Compile Include="..\..\..\src\read\StringReader.cs" Link="read\StringReader.cs" />
+    <Compile Include="..\..\..\src\read\TokenType.cs" Link="read\TokenType.cs" />
+    <Compile Include="..\..\..\src\write\CharsInfo.cs" Link="write\CharsInfo.cs" />
+    <Compile Include="..\..\..\src\write\DefaultStringLiterals.cs" Link="write\DefaultStringLiterals.cs" />
+    <Compile Include="..\..\..\src\write\Encoder.cs" Link="write\Encoder.cs" />
+    <Compile Include="..\..\..\src\write\Formatter.cs" Link="write\Formatter.cs" />
+    <Compile Include="..\..\..\src\write\StreamInfo.cs" Link="write\StreamInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="read\" />
+    <Folder Include="write\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

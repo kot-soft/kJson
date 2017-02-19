@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{959A54C6-E5A4-4A51-A2FD-FBD2F3C5273F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kJson</RootNamespace>
+    <AssemblyName>kJson</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\src\JSON.cs">
+      <Link>JSON.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\EscapeInfo.cs">
+      <Link>read\EscapeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\ParseException.cs">
+      <Link>read\ParseException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\Parser.cs">
+      <Link>read\Parser.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\ParsingStack.cs">
+      <Link>read\ParsingStack.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\ParsingState.cs">
+      <Link>read\ParsingState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\Reader.cs">
+      <Link>read\Reader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\RestrictLevel.cs">
+      <Link>read\RestrictLevel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\StackList.cs">
+      <Link>read\StackList.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\StreamReader.cs">
+      <Link>read\StreamReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\StringReader.cs">
+      <Link>read\StringReader.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\read\TokenType.cs">
+      <Link>read\TokenType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\write\CharsInfo.cs">
+      <Link>write\CharsInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\write\DefaultStringLiterals.cs">
+      <Link>write\DefaultStringLiterals.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\write\Encoder.cs">
+      <Link>write\Encoder.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\write\Formatter.cs">
+      <Link>write\Formatter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\write\StreamInfo.cs">
+      <Link>write\StreamInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
