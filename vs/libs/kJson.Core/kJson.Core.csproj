@@ -12,6 +12,9 @@
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
     <PackageTags>CSharp JSON Parser Generator Serializer C# Json.NET</PackageTags>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/kot-soft/kJson</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Release 1.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
