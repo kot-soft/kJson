@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace kJson
+namespace kJson.Read
 {
 
 	using ParsingRule = Action<Parser>;
@@ -696,7 +696,7 @@ namespace kJson
 			Stack = new ParsingStack();
 		}
 
-		public object Parse(Reader reader, RestrictLevel restrict = RestrictLevel.Standard)
+		public object Parse(Reader reader, RestrictLevel restrict = RestrictLevel.Extended)
 		{
 			Input = reader;
 			CurrentState = ParsingState.Start;

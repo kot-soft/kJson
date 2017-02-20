@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace kJson
+namespace kJson.Read
 {
     public class StringReader : Reader
     {

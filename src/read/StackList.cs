@@ -14,7 +14,7 @@
 
 using System;
 
-namespace kJson
+namespace kJson.Read
 {
 	public class StackList<T> : System.Collections.ArrayList
     {
