@@ -16,7 +16,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace kJson
+namespace kJson.Read
 {
 	public class StreamReader : Reader
     {

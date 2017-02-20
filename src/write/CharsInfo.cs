@@ -15,7 +15,7 @@
 using System;
 using System.Collections;
 
-namespace kJson
+namespace kJson.Write
 {
 	public class CharsInfo
 	{

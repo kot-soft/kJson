@@ -16,27 +16,27 @@ namespace kJson
 {
 	public class JSON
 	{
-		public static Parser Parser = new Parser();
-		public static Encoder Encoder = new Encoder();
+		public static kJson.Read.Parser Parser = new kJson.Read.Parser();
+		public static kJson.Write.Encoder Encoder = new kJson.Write.Encoder();
 
 		public static object Parse(string text)
 		{
-			return Parser.Parse(new StringReader(text));
+			return Parser.Parse(new kJson.Read.StringReader(text));
 		}
 
 		public static object Parse(System.IO.Stream stream)
 		{
-			return Parser.Parse(new StreamReader(stream));
+			return Parser.Parse(new kJson.Read.StreamReader(stream));
 		}
 
 		public static async System.Threading.Tasks.Task<object> ParseAsync(string text)
 		{
-			return await new System.Threading.Tasks.Task<object>(() => new Parser().Parse(new StringReader(text)));
+			return await new System.Threading.Tasks.Task<object>(() => new kJson.Read.Parser().Parse(new kJson.Read.StringReader(text)));
 		}
 
 		public static async System.Threading.Tasks.Task<object> ParseAsync(System.IO.Stream stream, System.Text.Encoding encoding = null)
 		{
-			return await new System.Threading.Tasks.Task<object>(() => new Parser().Parse(new StreamReader(stream, encoding)));
+			return await new System.Threading.Tasks.Task<object>(() => new kJson.Read.Parser().Parse(new kJson.Read.StreamReader(stream, encoding)));
 		}
 
 		public static string Stringify(object value)
@@ -51,12 +51,12 @@ namespace kJson
 
 		public static async System.Threading.Tasks.Task<string> StringifyAsync(object value)
 		{
-			return await new System.Threading.Tasks.Task<string>(() => new Encoder().Stringify(value));
+			return await new System.Threading.Tasks.Task<string>(() => new kJson.Write.Encoder().Stringify(value));
 		}
 
 		public static async void WriteAsync(object value, System.IO.Stream stream, System.Text.Encoding encoding = null)
 		{
-			await new System.Threading.Tasks.Task(() => new Encoder().Write(value, stream, encoding));
+			await new System.Threading.Tasks.Task(() => new kJson.Write.Encoder().Write(value, stream, encoding));
 		}
 
 	}

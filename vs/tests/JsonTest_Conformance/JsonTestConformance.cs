@@ -11,18 +11,18 @@ namespace JsonTest_Conformance
 {
 	class JsonTestConformance
 	{
-		public static string PeekInput(kJson.Parser context)
+		public static string PeekInput(kJson.Read.Parser context)
 		{
-            context.Input.Parse((int)kJson.TokenType.Spaces);
+            context.Input.Parse((int)kJson.Read.TokenType.Spaces);
             var c = context.Input.Peek();
-            return c == kJson.Reader.EOF ? "(EOF)" : "--> '" + c + '\'';
+            return c == kJson.Read.Reader.EOF ? "(EOF)" : "--> '" + c + '\'';
 		}
 
 		public static void Main(string[] args)
 		{
             int filestested = 0;
             int errorsoccured = 0;
-			kJson.Parser parser = new kJson.Parser()
+			kJson.Read.Parser parser = new kJson.Read.Parser()
             {
 
                 Track = (context) =>
@@ -42,7 +42,7 @@ namespace JsonTest_Conformance
             };
             foreach (var fn in Directory.GetFiles(".", "*.json"))
 			{
-				foreach (var r in typeof(kJson.RestrictLevel).GetEnumValues().Cast<kJson.RestrictLevel>())
+				foreach (var r in typeof(kJson.Read.RestrictLevel).GetEnumValues().Cast<kJson.Read.RestrictLevel>())
 				{
 					Console.WriteLine("");
 					Console.WriteLine($"{fn} ({r})");
@@ -52,7 +52,7 @@ namespace JsonTest_Conformance
                         filestested++;
 						using (var fs = new FileStream(fn, FileMode.Open))
 						{
-							var intermediate = parser.Parse(new kJson.StreamReader(fs), kJson.RestrictLevel.Tolerance);
+							var intermediate = parser.Parse(new kJson.Read.StreamReader(fs), kJson.Read.RestrictLevel.Tolerance);
 							Console.WriteLine("=============================");
 						}
 					}

@@ -14,7 +14,7 @@
 
 using System;
 
-namespace kJson
+namespace kJson.Write
 {
 	public class Formatter
 	{
