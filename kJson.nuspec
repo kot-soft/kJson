@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>kJson</id>
+    <version>1.0.2</version>
+    <authors>Constantine Telesnin</authors>
+    <owners>KotSoft</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/kot-soft/kJson</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Simple and fast JSON parsing and serializing</description>
+    <releaseNotes>Release 1.02 Added support for .Net Framework 4.6.2</releaseNotes>
+    <copyright>Copyright 2017 Constantine Telesnin</copyright>
+    <tags>CSharp JSON Parser Generator Serializer C# Json.NET</tags>
+    <dependencies>
+      <group targetFramework="netstandard1.6">
+        <dependency id="NETStandard.Library" version="1.6.0" />
+        <dependency id="System.Collections.NonGeneric" version="4.3.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- net45 -->
+    <file src="vs\libs\kJson.NetFramework\bin\Release\kJson.dll" target="lib\net45\kJson.dll" />
+    <!-- netstandard1.6 -->
+    <file src="vs\libs\kJson.Core\bin\Release\netstandard1.6\kJson.dll" target="lib\netstandard1.6\kJson.dll" />
+  </files>
+</package>

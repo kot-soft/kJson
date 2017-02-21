@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonTest_Conformance", "vs\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonTest_Speed", "vs\tests\JsonTest_Speed\JsonTest_Speed.csproj", "{6A5547A9-06E2-485D-8035-7B0ADEB3D153}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2DBB0A53-1E76-476D-B2B2-7B574722D53A}"
+	ProjectSection(SolutionItems) = preProject
+		kJson.nuspec = kJson.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
