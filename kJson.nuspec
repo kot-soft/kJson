@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>kJson</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <authors>Constantine Telesnin</authors>
     <owners>KotSoft</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/kot-soft/kJson</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Simple and fast JSON parsing and serializing</description>
-    <releaseNotes>Release 1.02 Added support for .Net Framework 4.6.2</releaseNotes>
+    <releaseNotes>Release 1.03 Eliminate bug in string parsing</releaseNotes>
     <copyright>Copyright 2017 Constantine Telesnin</copyright>
     <tags>CSharp JSON Parser Generator Serializer C# Json.NET</tags>
     <dependencies>
