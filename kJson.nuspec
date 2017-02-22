@@ -2,6 +2,7 @@
 <package >
   <metadata>
     <id>kJson</id>
+    <title>kJson</title>
     <version>1.0.3</version>
     <authors>Constantine Telesnin</authors>
     <owners>KotSoft</owners>
