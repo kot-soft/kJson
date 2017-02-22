@@ -9,7 +9,7 @@ namespace JsonTest_Speed
     {
         public static void Main(string[] args)
         {
-            var settings = new Dictionary<object, object>()
+			var settings = new Dictionary<object, object>()
             {
                 ["working profile"] = "read speed test",
                 ["profiles"] = new Dictionary<object, object>()

@@ -117,27 +117,24 @@ namespace kJson.Read
                         bool barrier = false;
 
                         Parse((int)TokenType.Spaces);
-                        if (Index < (Data.Length - 5) && (Data[(int)Index] == 'f' && Data[(int)Index + 1] == 'a' && Data[(int)Index + 2] == 'l' && Data[(int)Index + 3] == 's' && Data[(int)Index + 4] == 'e'))
-                        {
-                            flags = LiteralFlags.False;
-                            Index += 5;
-                            Parse((int)TokenType.Spaces);
-                        }
-                        else if (Index < (Data.Length - 4))
-                        {
-                            if (Data[(int)Index] == 't' && Data[(int)Index + 1] == 'r' && Data[(int)Index + 2] == 'u' && Data[(int)Index + 3] == 'e')
-                            {
-                                flags = LiteralFlags.True;
-                                Index += 4;
-                                Parse((int)TokenType.Spaces);
-                            }
-                            else if (Data[(int)Index] == 'n' && Data[(int)Index + 1] == 'u' && Data[(int)Index + 2] == 'l' && Data[(int)Index + 3] == 'l')
-                            {
-                                flags = LiteralFlags.Null;
-                                Index += 4;
-                                Parse((int)TokenType.Spaces);
-                            }
-                        }
+						if (Index < (Data.Length - 5) && (Data[(int)Index] == 'f' && Data[(int)Index + 1] == 'a' && Data[(int)Index + 2] == 'l' && Data[(int)Index + 3] == 's' && Data[(int)Index + 4] == 'e'))
+						{
+							flags = LiteralFlags.False;
+							Index += 5;
+							Parse((int)TokenType.Spaces);
+						}
+						else if (Index < (Data.Length - 4) && Data[(int)Index] == 't' && Data[(int)Index + 1] == 'r' && Data[(int)Index + 2] == 'u' && Data[(int)Index + 3] == 'e')
+						{
+							flags = LiteralFlags.True;
+							Index += 4;
+							Parse((int)TokenType.Spaces);
+						}
+						else if (Index < (Data.Length - 4) && Data[(int)Index] == 'n' && Data[(int)Index + 1] == 'u' && Data[(int)Index + 2] == 'l' && Data[(int)Index + 3] == 'l')
+						{
+							flags = LiteralFlags.Null;
+							Index += 4;
+							Parse((int)TokenType.Spaces);
+						}
 
                         else while (Index < Data.Length && !barrier)
                         {
